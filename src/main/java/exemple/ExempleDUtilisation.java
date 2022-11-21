@@ -8,7 +8,18 @@ import java.awt.Font;
 public class ExempleDUtilisation {
 
     public static void main(String[] args) {
-        new ExempleDUtilisation().exemple();
+        new ExempleDUtilisation().myExemple();
+    }
+
+
+    public void myExemple(){
+       Bandeau bd= new Bandeau();
+       bd.setMessage("Heloooooo");
+       Scenario scenario= new Scenario();
+       scenario.addEffet(new Clignotant(),2);
+       scenario.addEffet(new Zoom(),2   );
+       scenario.addEffet(new Rotation(),3);
+       scenario.start(bd);
     }
 
     public void exemple() {
